@@ -1,23 +1,15 @@
-import Navbar from "./Navbar";
-import Pricing from "./pages/MyProjects";
-import Home from "./pages/Main";
-import About from "./pages/AboutMe";
-import { Route, Routes } from 'react-router-dom'
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FormComp from './components/FormComp';
+import ShowResult from './components/ShowResult';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/myProjects" element={<Pricing />} />
-          <Route path="/aboutMe" element={<About />} />
-        </Routes>
-      </div>
+      <FormComp />
+      <ShowResult mostrar />
     </>
-    
-  );
+  )
 }
 
 export default App;

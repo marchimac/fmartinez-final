@@ -1,0 +1,33 @@
+.active {
+  color: red;
+}
+
+.color {
+  color: #f29f42;
+}
+
+.bg {
+  background-color: #ffc855;
+}
+
+.card {
+  width: calc(100% - 30px);
+  margin: 15px;
+
+  &-title {
+    margin: 5%;
+  }
+
+  &-link {
+    margin: 5%;
+  }
+
+}
+
+.recipes {
+  margin-bottom: 0px;
+}
+
+.mealsLink {
+  margin-top: 0px;
+}
