@@ -51,7 +51,7 @@ export default function Api() {
 
         <hr />
 
-        <Button>Nueva búsqueda</Button>
+        {/* <Button>Nueva búsqueda</Button>
         <CardGroup className='mt-3 rounded' >
             {meals?.map( (meal) => (
                 <Card className='p-2' key={meal.id} >
@@ -97,7 +97,7 @@ export default function Api() {
                     <Card.Title>Proteins: {nutrients.protein}</Card.Title>
                 </Card>
                 }
-        </CardGroup>
+        </CardGroup> */}
     </>
   )
 }

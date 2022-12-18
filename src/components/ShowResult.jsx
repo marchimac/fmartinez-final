@@ -3,11 +3,11 @@ import { useContexto } from '../context/MealsContext'
 
 function ShowResult(props) {
   const {tmb} = useContexto()
-  const mostrar = props.mostrar
+  const mostrarResultado = props.mostrarResultado
 
   return (
     <div>
-      {mostrar ? <h2>{tmb}</h2> : null}
+      {mostrarResultado ? <h2>{tmb}</h2> : null}
     </div>
   )
 }
