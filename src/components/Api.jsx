@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card, CardGroup } from 'react-bootstrap'
+import { Button, Card, CardGroup } from 'react-bootstrap'
 import axios from 'axios'
 import { useContexto } from '../context/MealsContext'
 import { Link } from 'react-router-dom'
@@ -26,9 +26,10 @@ export default function Api() {
 
   return (
     <>
-        <CardGroup className='mt-5 border rounded' >
+        <Button variant='warning' size='sm' className='mt-3 container-fluid' >Nueva búsqueda</Button>
+        <CardGroup className='mt-2 rounded' >
             {meals?.map( (meal) => (
-                <Card key={meal.id} >
+                <Card className='p-2' key={meal.id} >
                     <Card.Img variant='bottom' src={`https://webknox.com/recipeImages/${meal.id}-556x370.jpg`}></Card.Img>
                     <Card.Title>{meal.title}</Card.Title>
                     <Card.Body>Ready in {meal.readyInMinutes} minutes</Card.Body>
@@ -37,68 +38,66 @@ export default function Api() {
                 </Card>
                 ) )}
         </CardGroup>
-                { Object.keys(nutrients).length !== 0 &&
-                    <div>
-                        {console.log({nutrients})}
-                        <Card.Body>Calories: {nutrients.calories}</Card.Body>
-                        <Card.Body>Carbohydrates: {nutrients.carbohydrates}</Card.Body>
-                        <Card.Body>Fats: {nutrients.fat}</Card.Body>
-                        <Card.Body>Proteins: {nutrients.protein}</Card.Body>
-                    </div>
+        <CardGroup className='mt-2 mb-4 justify-content text-center rounded' >
+            { Object.keys(nutrients).length !== 0 &&
+                <Card className='p-2' >
+                    <Card.Title>Calories: {nutrients.calories}</Card.Title>
+                    <Card.Title>Carbohydrates: {nutrients.carbohydrates}</Card.Title>
+                    <Card.Title>Fats: {nutrients.fat}</Card.Title>
+                    <Card.Title>Proteins: {nutrients.protein}</Card.Title>
+                </Card>
                 }
+        </CardGroup>
 
+        <hr />
 
-                
-        <CardGroup className='mt-5' >
-            {meals.map( (meal) => (
-                <Card key={meal.id} >
+        <Button>Nueva búsqueda</Button>
+        <CardGroup className='mt-3 rounded' >
+            {meals?.map( (meal) => (
+                <Card className='p-2' key={meal.id} >
                     <Card.Img variant='bottom' src={`https://webknox.com/recipeImages/${meal.id}-556x370.jpg`}></Card.Img>
                     <Card.Title>{meal.title}</Card.Title>
-                    <Card.Body>Calories: {nutrients.calories}</Card.Body>
-                    <Card.Body>Carbohydrates: {nutrients.carbohydrates}</Card.Body>
-                    <Card.Body>Fats: {nutrients.fat}</Card.Body>
-                    <Card.Body>Proteins: {nutrients.protein}</Card.Body>
                     <Card.Body>Ready in {meal.readyInMinutes} minutes</Card.Body>
                     <Card.Body className='recipes'>Link to the recipe:</Card.Body>
-                    <Card.Link className='mealsLink'>{meal.sourceUrl}</Card.Link>
+                    <Card.Link className='mealsLink'><Link to={meal.sourceUrl} >Recipe</Link></Card.Link>
                 </Card>
                 ) )}
         </CardGroup>
-                { Object.keys(nutrients).length !== 0 &&
-                    <div>
-                        {console.log({nutrients})}
-                        <Card.Body>Calories: {nutrients.calories}</Card.Body>
-                        <Card.Body>Carbohydrates: {nutrients.carbohydrates}</Card.Body>
-                        <Card.Body>Fats: {nutrients.fat}</Card.Body>
-                        <Card.Body>Proteins: {nutrients.protein}</Card.Body>
-                    </div>
+        <CardGroup className='mt-2 mb-4 justify-content text-center rounded' >
+            { Object.keys(nutrients).length !== 0 &&
+                <Card className='p-2' >
+                    <Card.Title>Calories: {nutrients.calories}</Card.Title>
+                    <Card.Title>Carbohydrates: {nutrients.carbohydrates}</Card.Title>
+                    <Card.Title>Fats: {nutrients.fat}</Card.Title>
+                    <Card.Title>Proteins: {nutrients.protein}</Card.Title>
+                </Card>
                 }
+        </CardGroup>
 
+        <hr />
 
-        <CardGroup className='mt-5' >
-            {meals.map( (meal) => (
-                <Card key={meal.id} >
+        <Button>Nueva búsqueda</Button>
+        <CardGroup className='mt-3 rounded' >
+            {meals?.map( (meal) => (
+                <Card className='p-2' key={meal.id} >
                     <Card.Img variant='bottom' src={`https://webknox.com/recipeImages/${meal.id}-556x370.jpg`}></Card.Img>
                     <Card.Title>{meal.title}</Card.Title>
-                    <Card.Body>Calories: {nutrients.calories}</Card.Body>
-                    <Card.Body>Carbohydrates: {nutrients.carbohydrates}</Card.Body>
-                    <Card.Body>Fats: {nutrients.fat}</Card.Body>
-                    <Card.Body>Proteins: {nutrients.protein}</Card.Body>
                     <Card.Body>Ready in {meal.readyInMinutes} minutes</Card.Body>
                     <Card.Body className='recipes'>Link to the recipe:</Card.Body>
-                    <Card.Link className='mealsLink'>{meal.sourceUrl}</Card.Link>
+                    <Card.Link className='mealsLink'><Link to={meal.sourceUrl} >Recipe</Link></Card.Link>
                 </Card>
                 ) )}
         </CardGroup>
-                { Object.keys(nutrients).length !== 0 &&
-                    <div>
-                        {console.log({nutrients})}
-                        <Card.Body>Calories: {nutrients.calories}</Card.Body>
-                        <Card.Body>Carbohydrates: {nutrients.carbohydrates}</Card.Body>
-                        <Card.Body>Fats: {nutrients.fat}</Card.Body>
-                        <Card.Body>Proteins: {nutrients.protein}</Card.Body>
-                    </div>
+        <CardGroup className='mt-2 mb-4 justify-content text-center rounded' >
+            { Object.keys(nutrients).length !== 0 &&
+                <Card className='p-2' >
+                    <Card.Title>Calories: {nutrients.calories}</Card.Title>
+                    <Card.Title>Carbohydrates: {nutrients.carbohydrates}</Card.Title>
+                    <Card.Title>Fats: {nutrients.fat}</Card.Title>
+                    <Card.Title>Proteins: {nutrients.protein}</Card.Title>
+                </Card>
                 }
+        </CardGroup>
     </>
   )
 }
