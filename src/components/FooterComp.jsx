@@ -6,8 +6,8 @@ export default function App() {
     <MDBFooter bgColor='light' className='text-center text-lg-left'>
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()} Copyright - {' '}
-        <a className='text-dark' href='https://mdbootstrap.com/'>
-        Designed by Fernando with the collaboration of Dani
+        <a className='text-dark decoration-none' href='https://mdbootstrap.com/'>
+        Designed by Fernando Martínez Sánchez
         </a>
       </div>
     </MDBFooter>

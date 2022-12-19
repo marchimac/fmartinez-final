@@ -15,6 +15,7 @@ function FormComp() {
 
   const [actividad, setActividad] = useState('')
   const [genero, setGenero] = useState('')
+  const [state, setState] = useState({isSubmitted:false})
 
   let TMB
 
@@ -56,8 +57,9 @@ function FormComp() {
     }
     
     setTmb(TMB)
+    setState({isSubmitted: true})
 
-  }
+  } 
 
   return (
     <Form style={{width: '75%'}} onSubmit={handleSubmit} className='m-auto mt-3 border p-3 text-center'>
@@ -75,17 +77,17 @@ function FormComp() {
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="peso">
         <Form.Label>Peso</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu peso en kg" ref={pesoRef} />
+        <Form.Control className='text-center' type="text" placeholder="Introduce tu peso en kg" ref={pesoRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="estatura">
         <Form.Label>Estatura</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu estatura en cm" ref={estaturaRef} />
+        <Form.Control className='text-center' type="text" placeholder="Introduce tu estatura en cm" ref={estaturaRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="edad">
         <Form.Label>Edad</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu edad en años" ref={edadRef} />
+        <Form.Control className='text-center' type="text" placeholder="Introduce tu edad en años" ref={edadRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Select className='mb-3 text-center p-3 rounded bg' value={actividad} onChange={guardarActividad} >
@@ -102,12 +104,12 @@ function FormComp() {
           Calcular
         </Button>
 
-        <Button className='m-1' variant="secondary" type="reset">
+        <Button className='m-1' variant="secondary" type="reset" onClick={() => {setState({isSubmitted:false})}} >
           Borrar
         </Button>
       </FormGroup>
 
-      <ShowResult />
+      {state.isSubmitted && <ShowResult mostrarResultado />}
 
     </Form>
     

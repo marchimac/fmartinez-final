@@ -4,10 +4,11 @@ import { useContexto } from '../context/MealsContext'
 function ShowResult(props) {
   const {tmb} = useContexto()
   const mostrarResultado = props.mostrarResultado
+  console.log(typeof mostrarResultado);
 
   return (
     <div>
-      {mostrarResultado ? <h2>{tmb}</h2> : null}
+      {mostrarResultado !== undefined ? <h2>Resultado: {tmb}</h2> : ''}
     </div>
   )
 }
