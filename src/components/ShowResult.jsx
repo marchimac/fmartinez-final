@@ -1,7 +1,6 @@
 import React from 'react'
 import { useContexto } from '../context/MealsContext'
 import '../styles/ShowResult.scss'
-import { Button } from 'react-bootstrap'
 // import { useState } from 'react'
 
 
@@ -11,25 +10,24 @@ function ShowResult(props) {
   // const [ gain, setGain ] = useState()
 
 
-  const {tmb, setTmb} = useContexto()
+  const {tmb} = useContexto()
   const mostrarResultado = props.mostrarResultado
 
-  let perder = Math.round(tmb - (tmb * 10 / 100))
-  let ganar = Math.round(tmb +(tmb * 10 / 100))
+  // let perder = Math.round(tmb - (tmb * 10 / 100))
+  // let ganar = Math.round(tmb + (tmb * 10 / 100))
 
-  const handleLose = () => {
-    setTmb(perder)
-  }
+  // const handleLose = () => {
+  //   setTmb(perder)
+  // }
 
-  const handleGain = () => {
-    setTmb(ganar)
-  }
+  // const handleGain = () => {
+  //   setTmb(ganar)
+  // }
 
   return (
     <div >
-      {mostrarResultado !== undefined ? <div className='optionsResult' ><h4>Su tasa metabólica basal es de {tmb} kcal/día  <Button variant='outline-warning' >Seleccionar</Button></h4></div>  : ''}
-      {mostrarResultado !== undefined ? <div className='optionsResult' ><h4>Si quiere PERDER peso necesita {perder} kcal/día  <Button onClick={handleLose} variant='outline-warning' >Seleccionar</Button></h4></div>  : ''}
-      {mostrarResultado !== undefined ? <div className='optionsResult' ><h4>Si quere GANAR peso necesita {ganar} kcal/día  <Button onClick={handleGain} variant='outline-warning' >Seleccionar</Button></h4></div>  : ''}
+      {mostrarResultado !== undefined ? <h4>Su tasa metabólica basal es de {tmb} kcal/día</h4>  : ''}
+      {mostrarResultado !== undefined ? <h6>Haga click en recetas para ver un menú con las calorías calculadas</h6> : ''}
     </div>
   )
 }

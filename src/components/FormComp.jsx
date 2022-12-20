@@ -78,17 +78,17 @@ function FormComp() {
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="peso">
         <Form.Label>Peso</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu peso en kg" ref={pesoRef} autoComplete='off' />
+        <Form.Control name='pesoRef' className='text-center' type="text" placeholder="Introduce tu peso en kg" ref={pesoRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="estatura">
         <Form.Label>Estatura</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu estatura en cm" ref={estaturaRef} autoComplete='off' />
+        <Form.Control name='estaturaRef' className='text-center' type="text" placeholder="Introduce tu estatura en cm" ref={estaturaRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Group className="mb-3 border p-3 rounded bg" controlId="edad">
         <Form.Label>Edad</Form.Label>
-        <Form.Control className='text-center' type="text" placeholder="Introduce tu edad en años" ref={edadRef} autoComplete='off' />
+        <Form.Control name='edadRef' className='text-center' type="text" placeholder="Introduce tu edad en años" ref={edadRef} autoComplete='off' />
       </Form.Group>
 
       <Form.Select className='mb-3 text-center p-3 rounded bg' value={actividad} onChange={guardarActividad} >
