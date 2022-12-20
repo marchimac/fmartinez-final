@@ -56,6 +56,7 @@ function FormComp() {
       TMB = ((parseFloat(pesoRef.current.value) * 10) + (parseFloat(estaturaRef.current.value) * 6.25) - (parseFloat(edadRef.current.value) * 5) - 161) * 1.9
     }
     
+    TMB = Math.round(TMB)
     setTmb(TMB)
     setState({isSubmitted: true})
 
@@ -92,11 +93,11 @@ function FormComp() {
 
       <Form.Select className='mb-3 text-center p-3 rounded bg' value={actividad} onChange={guardarActividad} >
         <option>Nivel de actividad</option>
-        <option value='sedentaria'>Sedentaria</option>
-        <option value='ligera'>Ligera</option>
-        <option value='moderada'>Moderada</option>
-        <option value='intensa'>Intensa</option>
-        <option value='muy-intensa'>Muy intensa</option>
+        <option value='sedentaria'>Sedentario (Poco o ningún ejercicio)</option>
+        <option value='ligera'>Ligera (1 o 2 días por semana)</option>
+        <option value='moderada'>Moderada (Entre 3 y 5 días por semana)</option>
+        <option value='intensa'>Intensa (6 o 7 días por semana)</option>
+        <option value='muy-intensa'>Muy intensa (2 veces al día)</option>
       </Form.Select>
 
       <FormGroup className='mb-3 border p-3 rounded' >

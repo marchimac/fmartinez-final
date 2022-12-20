@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Button, Card, CardGroup } from 'react-bootstrap'
 import axios from 'axios'
 import { useContexto } from '../context/MealsContext'
-import { Link } from 'react-router-dom'
-// import handleSubmit from './FormComp'
 
 export default function Api() {
     
@@ -43,8 +41,8 @@ export default function Api() {
                     <Card.Title>{meal.title}</Card.Title>
                     <Card.Body>Ready in {meal.readyInMinutes} minutes</Card.Body>
                     <Card.Body className='recipes'>Link to the recipe:</Card.Body>
-                    <Card.Link className='mealsLink'><Link to={meal.sourceUrl} >Recipe</Link></Card.Link>
-                </Card>
+                    <Card.Link className='mealsLink' target='_blank' rel='noreferrer' href={meal.sourceUrl} >Recipe</Card.Link>
+                </Card> 
                 ) )}
         </CardGroup>
         <CardGroup className='mt-2 mb-4 justify-content text-center rounded' >
