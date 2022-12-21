@@ -19,12 +19,10 @@ export default function Api() {
         if(tmb) {
             axios.get(`https://api.spoonacular.com/mealplanner/generate?apiKey=45f3f23dd164438abb1babccb1e531ac&timeFrame=day&targetCalories=${tmb}`)
                 .then( res => {
-                    console.log(res)
                     setMeals(res.data.meals)
                     setNutrients(res.data.nutrients)
                 } )
                 .catch(err => {
-                    console.log(err)
                 })
         }
     }, [tmb, fecha])
