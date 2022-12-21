@@ -6,6 +6,8 @@ import Informacion from '../pages/Informacion'
 
 export default function Routing() {
   return (
+
+    /* declaro las rutas para que funcione el routing y poder navegar entre paginas */
     <Routes>
         <Route path='/' element={<App />} />
         <Route path='/recetas' element={<Recetas />} />

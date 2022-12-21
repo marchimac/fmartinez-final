@@ -7,31 +7,38 @@ import ShowResult from './ShowResult';
 
 function FormComp() {
 
+  /* exporto el contexto para utilizarlo aqui */
   const { setTmb } = useContexto()
 
+  /* declaro los useRef para poder guardar las variables numericas */
   const pesoRef = React.useRef()
   const estaturaRef = React.useRef()
   const edadRef = React.useRef()
 
+  /* declaro los useState para guardar las variables del input radio y del select */
   const [actividad, setActividad] = useState('')
   const [genero, setGenero] = useState('')
   const [state, setState] = useState({isSubmitted:false})
 
   let TMB
 
+  /* funcion para guardar el valor de la actividad */
   const guardarActividad = (e) => {
     setActividad(e.target.value)
     console.log(e);
   }
 
+  /* funcion para guardar el valor del genero */
   const guardarGenero = (e) => {
     setGenero(e.target.value)
     console.log(e);
   }
 
+  /* funcion para recoger el click del boton y realizar el calculo */
   const handleSubmit = (e) => {
     e.preventDefault()
     
+    /* formulas para calcular la tasa metabolica a traves de if */
     if (genero === 'masculino' && actividad === 'sedentaria') {
       TMB = ((parseFloat(pesoRef.current.value) * 10) + (parseFloat(estaturaRef.current.value) * 6.25) - (parseFloat(edadRef.current.value) * 5) + 5) * 1.2
     } else if (genero === 'masculino' && actividad === 'ligera') {
@@ -56,13 +63,18 @@ function FormComp() {
       TMB = ((parseFloat(pesoRef.current.value) * 10) + (parseFloat(estaturaRef.current.value) * 6.25) - (parseFloat(edadRef.current.value) * 5) - 161) * 1.9
     }
     
+    /* con esta funcion impido que se muestren decimales en el resultado */
     TMB = Math.round(TMB)
+
+    /* seteo la variable TMB */
     setTmb(TMB)
     setState({isSubmitted: true})
 
   } 
 
   return (
+
+    /* procedo a dar formula al formulario */
     <Form style={{width: '75%'}} onSubmit={handleSubmit} className='m-auto mt-3 border p-3 text-center'>
 
       <FormGroup className='mb-3 border pt-3 rounded bg' value={genero} onChange={guardarGenero} >
@@ -110,6 +122,7 @@ function FormComp() {
         </Button>
       </FormGroup>
 
+      {/* llamo al componente showResult para que muestre el resultado cuando se haga click en calcular */}
       {state.isSubmitted && <ShowResult mostrarResultado />}
 
     </Form>

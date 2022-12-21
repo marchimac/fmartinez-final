@@ -7,8 +7,8 @@ import '../styles/NavbarComp.scss'
 function NavbarComp() {
   return (
     <>
-      <Navbar bg="dark" variant='dark' expand="lg">
-      <Container>
+      <Navbar className='contenedor__navbar' bg="dark" variant='dark' expand="lg">
+      <Container >
         <Navbar.Brand className='link' to="/">Cálculo de la Tasa Metabólica Basal</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -21,6 +21,8 @@ function NavbarComp() {
       </Container>
     </Navbar>
 
+    {/* dentro de este seciton meto lo que va a cambiar cuando hagamos click en los links del navbar */}
+    {/* header, navbar y footer apareceran en todas las paginas */}
     <section>
       <Outlet />
     </section>

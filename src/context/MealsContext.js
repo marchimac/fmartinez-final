@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useState } from "react";
 
+/* nombro la constante para el context */
 const MealsContext = React.createContext()
 
 export function useContexto() {
@@ -13,6 +14,7 @@ export const MealsProvider = ({ children }) => {
 
     return (
 
+        /* incluyo aquilo que quiero exportar para poder utilizar en cualquier lugar */
         <MealsContext.Provider value={{
             tmb,
             setTmb

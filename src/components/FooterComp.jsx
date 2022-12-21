@@ -3,6 +3,8 @@ import { MDBFooter } from 'mdb-react-ui-kit';
 
 export default function App() {
   return (
+
+    /* comienzo con el diseño del footer el cual va a ser estatico */
     <MDBFooter bgColor='light' className='text-center text-lg-left'>
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()} Copyright - {' '}

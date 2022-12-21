@@ -6,6 +6,8 @@ const styles = {
 }
 
 function HeaderComp() {
+
+  /* doy forma al footer estatico */
   return (
     <>
     <div className='d-flex m-3' data-testid='tested' >

@@ -1,3 +1,20 @@
+$white: #fff;
+$black: #000;
+$almostBlack: rgb(100, 100, 100);
+
 .optionResult {
     margin: 0 10px;
+}
+
+.contenedor {
+
+    background-color: $white;
+
+    &__resultado--h4 {
+        color: $black;
+    }
+
+    &__resultado--h6 {
+        color: $almostBlack;
+    }
 }

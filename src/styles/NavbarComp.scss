@@ -1,14 +1,22 @@
+$corporativo: #f29f42;
+$hover: #4c00ff;
+$activo: rgb(235, 0, 0);
+
 .link {
     color: #fff;
     text-decoration: none;
     margin: 0 20px;
 
     &:hover {
-        color: #ffff00;
+        color: $hover;
     }
 
 }
 
 .active {
-    color: #ffff00;
+    color: $activo;
+}
+
+.contenedor__navbar {
+    background-color: $corporativo !important;
 }
