@@ -1,5 +1,4 @@
-# Aplicación creada por Fernando Martínez Sánchez como proyecto final Front End Web Development
-# organizado por Fundación Adecco e impartido por General Assembly
+# Aplicación creada por Fernando Martínez Sánchez como proyecto final Front End Web Development organizado por Fundación Adecco e impartido por General Assembly
 
 ## Explicación del proyecto
 
@@ -44,5 +43,4 @@ En el terminal ejecute 'npm run eject'
 
 TENGA EN CUENTA QUE ESTE PASO NO TENDRÁ VUELTA ATRAS
 
-## LOS WIREFRAMES LOS PUEDE ENCONTRAR EN LA RAIZ DEL PROYECTO
-## DENTRO DE UNA CARPETA LLAMADA 'WIREFRAMES'
+## LOS WIREFRAMES LOS PUEDE ENCONTRAR EN LA RAIZ DEL PROYECTO DENTRO DE UNA CARPETA LLAMADA 'WIREFRAMES'
