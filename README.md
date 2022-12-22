@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Aplicación creada por Fernando Martínez Sánchez como proyecto final Front End Web Development
+# organizado por Fundación Adecco e impartido por General Assembly
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Explicación del proyecto
 
-## Available Scripts
+Una aplicación que a través de un formulario pide al usuario
+datos como el género, peso, estatura, edad y la actividad física
+y los maneja para calcular el índice metabólico basal.
+Una vez mostrado ese valor por pantalla y haciendo click en Recetas
+(que se encuentra en el Navbar)
+nos mostrará un menú diario compuesto por tres platos cuyo valor nutricional
+corresponde con el calculo realizado.
 
-In the project directory, you can run:
+### `Si quiere utilizar el proyecto`
 
-### `npm start`
+1º Descargue el archivo
+2º Lo descomprime
+3º Abra la carpeta contenedora con su editor de código
+4º Desde la terminal y dentro del proyecto ejecute 'npm install'
+5º A continuación ejecute 'npm start'
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En ese momento se abrirá una ventana en su navegador
+para correr el proyecto en el servidor local
+[http://localhost:3000](http://localhost:3000)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A partir de ese momento cada vez que se realice y guarde algún
+cambio en el proyecto, este aparecera reflejado en el navegador.
 
-### `npm test`
+Para salir del modo compilador debe usar ctrl + C en el terminal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Para ejecutar test`
 
-### `npm run build`
+En el terminal ejecute 'npm run test' para proceder a realizar los test corespondientes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Para obtener los archivos necesarios para enviar a producción`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En el terminal ejecute 'npm run build' para que se creen todos los archivos necesarios para publicar el proyecto
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Si quiere volver al punto anterior a realizar el 'build'`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En el terminal ejecute 'npm run eject'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+TENGA EN CUENTA QUE ESTE PASO NO TENDRÁ VUELTA ATRAS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## LOS WIREFRAMES LOS PUEDE ENCONTRAR EN LA RAIZ DEL PROYECTO
+## DENTRO DE UNA CARPETA LLAMADA 'WIREFRAMES'
